@@ -34,7 +34,7 @@ fs.readdir("./commands/", (err, files) => {
     console.log("Loading Command: "+commandName)
   });
 });
-.listen(process.env.PORT || 5000)
+
 //Logging in to discord
 
 client.login(process.env.TOKEN)
