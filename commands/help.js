@@ -9,16 +9,16 @@ module.exports = {
     },
 
     run: async function(client, message, args){
-        var allcmds = "";
+        var allcmds = " ";
 
         client.commands.forEach(cmd => {
             let cmdinfo = cmd.info
-            allcmds+="⍆"+client.config.prefix+cmdinfo.name+" "+cmdinfo.usage+": "+cmdinfo.description+"\n"
+            allcmds+="↣ "+client.config.prefix+cmdinfo.name+" "+cmdinfo.usage+": "+cmdinfo.description+"\n"
         })
 
         let embed = new MessageEmbed()
         .setAuthor("Commands of "+client.user.username, "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
-        .setColor("YELLOW")
+        .setColor("GREY")
         .setDescription(allcmds)
         .setFooter(`DEVELOPER : Aldi Boytons.`)
 
@@ -30,7 +30,7 @@ module.exports = {
             if(!command)return message.channel.send("Unknown Command")
             let commandinfo = new MessageEmbed()
             .setTitle("Command: "+command.info.name+" info")
-            .setColor("BLACK")
+            .setColor("GREY")
             .setDescription(`
 Name: ${command.info.name}
 Description: ${command.info.description}
