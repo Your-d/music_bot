@@ -21,14 +21,14 @@ module.exports = {
             serverQueue.afk = !serverQueue.afk;
              message.channel.send({
                 embed: {
-                    color: "GREEN",
-                    description: `💤  **|**  AFK is **\`${serverQueue.afk === true ? "enabled" : "disabled"}\`**`
+                    color: "BLACK",
+                    description: `🖕  **|**  AFK di **\`${serverQueue.afk === true ? "enabled" : "disabled"}\`**`
                 }
             });
             return  fs.writeFile("./afk.json", JSON.stringify(afk), (err) => {
         if (err) console.error(err);
     });
         };
-    return sendError("There is nothing playing in this server.", message.channel);
+    return sendError("Gaada lagu nye nihh kontol.", message.channel);
   },
 };
