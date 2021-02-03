@@ -77,7 +77,7 @@ function generateQueueEmbed(message, queue) {
   
     const serverQueue =message.client.queue.get(message.guild.id);
     const embed = new MessageEmbed()
-     .setAuthor("Server Songs Queue", "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
+     .setAuthor("Server Songs Queue", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
     .setThumbnail(message.guild.iconURL())
     .setColor("BLACK")
     .setDescription(`${info}`)
