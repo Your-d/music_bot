@@ -24,7 +24,7 @@ module.exports = {
     }
 
     let lyricsEmbed = new MessageEmbed()
-      .setAuthor(`${queue.songs[0].title} — Lyrics`, "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
+      .setAuthor(`${queue.songs[0].title} — Lyrics`, "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
       .setThumbnail(queue.songs[0].img)
       .setColor("BLACK")
       .setDescription(lyrics)
