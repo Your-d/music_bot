@@ -23,14 +23,14 @@ module.exports = {
 		const url = args[0] ? args[0].replace(/<(.+)>/g, "$1") : "";
 		var searchString = args.join(" ");
 		const permissions = channel.permissionsFor(message.client.user);
-		if (!permissions.has("CONNECT")) return sendError("I cannot connect to your voice channel, make sure I have the proper permissions!", message.channel);
-		if (!permissions.has("SPEAK")) return sendError("I cannot speak in this voice channel, make sure I have the proper permissions!", message.channel);
+		if (!permissions.has("CONNECT")) return sendError("Gabisa join voice Gaada permis, coba chat Aldi !", message.channel);
+		if (!permissions.has("SPEAK")) return sendError("Gabisa ngomong nih gue kek org bisu, coba chat Aldi suru kasi gua permis.", message.channel);
 
 		if (!searchString||!url) return sendError(`Usage: ${message.client.config.prefix}playlist <YouTube Playlist URL | Playlist Name>`, message.channel);
 		if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
 			try {
 				const playlist = await ytpl(url.split("list=")[1]);
-				if (!playlist) return sendError("Playlist not found", message.channel)
+				if (!playlist) return sendError("Playlist Ga ketemu", message.channel)
 				const videos = await playlist.items;
 				for (const video of videos) {
 					// eslint-disable-line no-await-in-loop
@@ -38,8 +38,8 @@ module.exports = {
 				}
 				return message.channel.send({
 					embed: {
-						color: "GREEN",
-						description: `✅  **|**  Playlist: **\`${videos[0].title}\`** has been added to the queue`
+						color: "BLACK",
+						description: `✅  **|**  Playlist: **\`${videos[0].title}\`** Udah gue tambahin`
 					}
 				})
 			} catch (error) {
