@@ -60,7 +60,7 @@ module.exports = {
 					await handleVideo(video, message, channel, true); // eslint-disable-line no-await-in-loop
 				}
 				let thing = new MessageEmbed()
-					.setAuthor("Playlist has been added to queue", "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
+					.setAuthor("Playlist has been added to queue", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
 					.setThumbnail(songInfo.thumbnail)
 					.setColor("BLACK")
 					.setDescription(`✅  **|**  Playlist: **\`${songInfo.title}\`** has been added \`${songInfo.videoCount}\` video to the queue`)
@@ -109,7 +109,7 @@ module.exports = {
 				serverQueue.songs.push(song);
 				if (playlist) return;
 				let thing = new MessageEmbed()
-					.setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
+					.setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
 					.setThumbnail(song.img)
 					.setColor("BLACK")
 					.addField("Name", song.title, true)
@@ -165,7 +165,7 @@ stream.on('error', function(er)  {
 
     dispatcher.setVolume(serverQueue.volume / 100);
 let thing = new MessageEmbed()
-				.setAuthor("Started Playing Music!", "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
+				.setAuthor("Started Playing Music!", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
 				.setThumbnail(song.img)
 				.setColor("BLACK")
 				.addField("Name", song.title, true)
