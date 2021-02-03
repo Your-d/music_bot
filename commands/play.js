@@ -31,7 +31,7 @@ module.exports = {
     if (url.match(/^(https?:\/\/)?(www\.)?(m\.)?(youtube\.com|youtu\.?be)\/.+$/gi)) {
        try {
           songInfo = await ytdl.getInfo(url)
-          if(!songInfo)return sendError("Gabisa search di Youtube ni gatau knp,coba tanya si Aldi", message.channel);
+          if(!songInfo)return sendError("Gabisa masuk room tot,limit nya naekin dulu kntl-_-", message.channel);
         song = {
        id: songInfo.videoDetails.videoId,
        title: songInfo.videoDetails.title,
