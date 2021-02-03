@@ -17,7 +17,7 @@ module.exports = {
         })
 
         let embed = new MessageEmbed()
-        .setAuthor("Commands of "+client.user.username, "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
+        .setAuthor("Commands of "+client.user.username, "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
         .setColor("GREY")
         .setDescription(allcmds)
         .setFooter(`Developer : Aldi Boytons.`)
