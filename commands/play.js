@@ -73,7 +73,7 @@ module.exports = {
     if (serverQueue) {
       serverQueue.songs.push(song);
       let thing = new MessageEmbed()
-      .setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+      .setAuthor("Song has been added to queue", "assets/Music.gif")
       .setThumbnail(song.img)
       .setColor("BLACK")
       .addField("Name", song.title, true)
