@@ -73,7 +73,7 @@ module.exports = {
     if (serverQueue) {
       serverQueue.songs.push(song);
       let thing = new MessageEmbed()
-      .setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
+      .setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
       .setThumbnail(song.img)
       .setColor("BLACK")
       .addField("Name", song.title, true)
@@ -138,7 +138,7 @@ stream.on('error', function(er)  {
 
       dispatcher.setVolumeLogarithmic(queue.volume / 100);
       let thing = new MessageEmbed()
-      .setAuthor("SETELIN LAGU!", "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
+      .setAuthor("SETELIN LAGU!", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
       .setThumbnail(song.img)
       .setColor("BLACK")
       .addField("Name", song.title, true)
