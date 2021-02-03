@@ -11,10 +11,10 @@ module.exports = {
 
   run: async function (client, message, args) {
     const serverQueue = message.client.queue.get(message.guild.id);
-    if (!serverQueue) return sendError("There is nothing playing in this server.", message.channel);
+    if (!serverQueue) return sendError("Gaada yang di puter jing.", message.channel);
     let song = serverQueue.songs[0]
     let thing = new MessageEmbed()
-      .setAuthor("Now Playing", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+      .setAuthor("Now Playing", "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
       .setThumbnail(song.img)
       .setColor("BLACK")
       .addField("Name", song.title, true)
