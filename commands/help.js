@@ -13,14 +13,14 @@ module.exports = {
 
         client.commands.forEach(cmd => {
             let cmdinfo = cmd.info
-            allcmds+="↣ "+client.config.prefix+cmdinfo.name+" "+cmdinfo.usage+": "+cmdinfo.description+"\n"
+            allcmds+="➠ "+client.config.prefix+cmdinfo.name+" "+cmdinfo.usage+" : "+cmdinfo.description+"\n"
         })
 
         let embed = new MessageEmbed()
         .setAuthor("Commands of "+client.user.username, "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
         .setColor("GREY")
         .setDescription(allcmds)
-        .setFooter(`DEVELOPER : Aldi Boytons.`)
+        .setFooter(`Developer : Aldi Boytons.`)
 
         if(!args[0])return message.channel.send(embed)
         else {
