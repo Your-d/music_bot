@@ -4,7 +4,7 @@ const sendError = require("../util/error");
 module.exports = {
   info: {
     name: "queue",
-    description: "To show the server songs queue",
+    description: "Buat kasi liat queue nya",
     usage: "",
     aliases: ["q", "list", "songlist", "song-list"],
   },
@@ -13,10 +13,10 @@ module.exports = {
  
   const permissions = message.channel.permissionsFor(message.client.user);
     if (!permissions.has(["MANAGE_MESSAGES", "ADD_REACTIONS"]))
-      return sendError("Missing permission to manage messages or add reactions",message.channel);
+      return sendError("Gaada permis manage message sama add reaction",message.channel);
 
     const queue = message.client.queue.get(message.guild.id);
-    if (!queue) return sendError("There is nothing playing in this server.",message.channel)
+    if (!queue) return sendError("Gaada lagu nya tolol",message.channel)
 
     let currentPage = 0;
     const embeds = generateQueueEmbed(message, queue.songs);
@@ -79,7 +79,7 @@ function generateQueueEmbed(message, queue) {
     const embed = new MessageEmbed()
      .setAuthor("Server Songs Queue", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
     .setThumbnail(message.guild.iconURL())
-    .setColor("BLUE")
+    .setColor("BLACK")
     .setDescription(`${info}`)
     .addField("Now Playing", `[${queue[0].title}](${queue[0].url})`, true)
     .addField("Text Channel", serverQueue.textChannel, true)
