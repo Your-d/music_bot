@@ -21,7 +21,7 @@ module.exports = {
     serverQueue.connection.dispatcher.setVolumeLogarithmic(args[0] / 100);
     let xd = new MessageEmbed()
     .setDescription(`Udah gua atur jadi : **${args[0]/1}/100**`)
-    .setAuthor("Server Volume Manager", "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
+    .setAuthor("Server Volume Manager", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
     .setColor("BLACK")
     return message.channel.send(xd);
   },
