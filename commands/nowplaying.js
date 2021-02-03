@@ -14,7 +14,7 @@ module.exports = {
     if (!serverQueue) return sendError("Gaada yang di puter jing.", message.channel);
     let song = serverQueue.songs[0]
     let thing = new MessageEmbed()
-      .setAuthor("Now Playing", "https://raw.githubusercontent.com/aldiboytons/boytons/master/assets/Music.gif")
+      .setAuthor("Now Playing", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
       .setThumbnail(song.img)
       .setColor("BLACK")
       .addField("Name", song.title, true)
