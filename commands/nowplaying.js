@@ -14,8 +14,8 @@ module.exports = {
     if (!serverQueue) return sendError("Gaada yang di puter jing.", message.channel);
     let song = serverQueue.songs[0]
     let thing = new MessageEmbed()
-      .setAuthor("Now Playing", "https://cdn.discordapp.com/attachments/821310209623851008/822894990274723870/giphy.gif")
-      .setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822892961762377728/PicsArt_03-21-01.02.39.png")
+      .setAuthor("Now Playing", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
+      .setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png")
       .setColor("BLACK")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
