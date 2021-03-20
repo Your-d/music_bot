@@ -60,8 +60,8 @@ module.exports = {
 					await handleVideo(video, message, channel, true); // eslint-disable-line no-await-in-loop
 				}
 				let thing = new MessageEmbed()
-					.setAuthor("Playlist has been added to queue", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
-					.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png")
+					.setAuthor("Playlist has been added to queue", "https://cdn.discordapp.com/attachments/821310209623851008/822894990274723870/giphy.gif")
+					.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822892961762377728/PicsArt_03-21-01.02.39.png")
 					.setColor("BLACK")
 					.setDescription(`✅  **|**  Playlist: **\`${songInfo.title}\`** has been added \`${songInfo.videoCount}\` video to the queue`)
 				return message.channel.send(thing)
@@ -109,8 +109,8 @@ module.exports = {
 				serverQueue.songs.push(song);
 				if (playlist) return;
 				let thing = new MessageEmbed()
-					.setAuthor("Udah ditambahin di queue", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
-					.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png")
+					.setAuthor("Udah ditambahin di queue", "https://cdn.discordapp.com/attachments/821310209623851008/822894990274723870/giphy.gif")
+					.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822892961762377728/PicsArt_03-21-01.02.39.png")
 					.setColor("BLACK")
 					.addField("Name", song.title, true)
 					.addField("Duration", song.duration, true)
@@ -165,8 +165,8 @@ stream.on('error', function(er)  {
 
     dispatcher.setVolume(serverQueue.volume / 100);
 let thing = new MessageEmbed()
-				.setAuthor("Setel lagu dulu bray!", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
-				.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png")
+				.setAuthor("Setel lagu dulu bray!", "https://cdn.discordapp.com/attachments/821310209623851008/822894990274723870/giphy.gif")
+				.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822892961762377728/PicsArt_03-21-01.02.39.png")
 				.setColor("BLACK")
 				.addField("Name", song.title, true)
 				.addField("Duration", song.duration, true)
