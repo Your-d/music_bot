@@ -31,7 +31,7 @@ module.exports = {
           if (searched[0] == undefined)return sendError("Looks like i was unable to find the song on YouTube", message.channel);
                     let index = 0;
                     let embedPlay = new MessageEmbed()
-                        .setColor("BLUE")
+                        .setColor("BLACK")
                         .setAuthor(`Results for \"${args.join(" ")}\"`, message.author.displayAvatarURL())
                         .setDescription(`${searched.map(video2 => `**\`${++index}\`  |** [\`${video2.title}\`](${video2.url}) - \`${video2.durationFormatted}\``).join("\n")}`)
                         .setFooter("Type the number of the song to add it to the playlist");
@@ -84,7 +84,7 @@ module.exports = {
     if (serverQueue) {
       serverQueue.songs.push(song);
       let thing = new MessageEmbed()
-      .setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
+      .setAuthor("Udah di tambahin ke queue", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
       .setThumbnail(song.img)
       .setColor("YELLOW")
       .addField("Name", song.title, true)
@@ -115,7 +115,7 @@ module.exports = {
     var online = afk[message.guild.id]
     if (!song){
       if (!online.afk) {
-        sendError("Keluar aja lah gaad lagu lagi yg mao di play. Kalo mao gua stay terus ketik `!afk`\n\nDeveloper : Aldi Boytons", message.channel)
+        sendError("Keluar aja lah gaad lagu lagi yg mao di play. Kalo mao gua stay terus ketik `afk`\n\nTTAX Generation® Corp 2021.", message.channel)
         message.guild.me.voice.channel.leave();//If you want your bot stay in vc 24/7 remove this line :D
         message.client.queue.delete(message.guild.id);
       }
@@ -150,8 +150,8 @@ stream.on('error', function(er)  {
 
       dispatcher.setVolumeLogarithmic(queue.volume / 100);
       let thing = new MessageEmbed()
-      .setAuthor("Started Playing Music!", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
-      .setThumbnail(song.img)
+      .setAuthor("Started Playing Music!", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
+      .setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png")
       .setColor("BLACK")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
