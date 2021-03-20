@@ -84,7 +84,7 @@ module.exports = {
     if (serverQueue) {
       serverQueue.songs.push(song);
       let thing = new MessageEmbed()
-      .setAuthor("Udah di tambahin ke queue", "https://cdn.discordapp.com/attachments/821310209623851008/822894990274723870/giphy.gif")
+      .setAuthor("Udah di tambahin ke queue", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
       .setThumbnail(song.img)
       .setColor("YELLOW")
       .addField("Name", song.title, true)
@@ -150,8 +150,8 @@ stream.on('error', function(er)  {
 
       dispatcher.setVolumeLogarithmic(queue.volume / 100);
       let thing = new MessageEmbed()
-      .setAuthor("Started Playing Music!", "https://cdn.discordapp.com/attachments/821310209623851008/822894990274723870/giphy.gif")
-      .setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822892961762377728/PicsArt_03-21-01.02.39.png")
+      .setAuthor("Started Playing Music!", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
+      .setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png")
       .setColor("BLACK")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
