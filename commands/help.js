@@ -17,11 +17,11 @@ module.exports = {
         })
 
         let embed = new MessageEmbed()
-        .setAuthor("Commands of "+client.user.username, "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
+        .setAuthor("Commands of "+client.user.username, "https://cdn.discordapp.com/attachments/821310209623851008/822894990274723870/giphy.gif")
         .setColor("GREY")
         .setDescription(allcmds)
         .setFooter(`TTAX Generation® Corp 2021.`)
-        .setThumbnail('https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png')
+        .setThumbnail('https://cdn.discordapp.com/attachments/821310209623851008/822892961762377728/PicsArt_03-21-01.02.39.png')
 
         if(!args[0])return message.channel.send(embed)
         else {
