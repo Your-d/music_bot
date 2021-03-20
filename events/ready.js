@@ -1,3 +1,4 @@
+module.exports = async (client) => {
 const activities_list = [
     "sa.help", 
     "SATU ATAP",
@@ -11,3 +12,4 @@ bot.on('ready', () => {
         bot.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
     }, 10000); // Runs this every 10 seconds.
 });
+}
