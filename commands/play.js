@@ -73,8 +73,8 @@ module.exports = {
     if (serverQueue) {
       serverQueue.songs.push(song);
       let thing = new MessageEmbed()
-      .setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
-      .setThumbnail(song.img)
+      .setAuthor("Udah ditambahin di queue", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
+      .setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png")
       .setColor("BLACK")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
@@ -104,7 +104,7 @@ module.exports = {
     var online = afk[message.guild.id]
     if (!song){
       if (!online.afk) {
-        sendError("Keluar aja lah gaada lagu yg bisa gue puterin. Kalo mau gua stay di room trus ketik `!afk`\n\nDeveloper : Aldi Boytons | ラ𝙍𝙄𝙎𝙀", message.channel)
+        sendError("Keluar aja lah gaada lagu yg bisa gue puterin. Kalo mau gua stay di room trus ketik `afk`\n\nTTAX Generation® Corp 2021.", message.channel)
         message.guild.me.voice.channel.leave();//If you want your bot stay in vc 24/7 remove this line :D
         message.client.queue.delete(message.guild.id);
       }
@@ -138,8 +138,8 @@ stream.on('error', function(er)  {
 
       dispatcher.setVolumeLogarithmic(queue.volume / 100);
       let thing = new MessageEmbed()
-      .setAuthor("SETELIN LAGU!", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
-      .setThumbnail(song.img)
+      .setAuthor("SETELIN LAGU!", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
+      .setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png")
       .setColor("BLACK")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
