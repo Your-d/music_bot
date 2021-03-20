@@ -77,7 +77,7 @@ function generateQueueEmbed(message, queue) {
   
     const serverQueue =message.client.queue.get(message.guild.id);
     const embed = new MessageEmbed()
-     .setAuthor("Server Songs Queue", "https://cdn.discordapp.com/attachments/821310209623851008/822894990274723870/giphy.gif")
+     .setAuthor("Server Songs Queue", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
     .setThumbnail(message.guild.iconURL())
     .setColor("BLACK")
     .setDescription(`${info}`)
