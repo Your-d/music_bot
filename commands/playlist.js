@@ -60,8 +60,8 @@ module.exports = {
 					await handleVideo(video, message, channel, true); // eslint-disable-line no-await-in-loop
 				}
 				let thing = new MessageEmbed()
-					.setAuthor("Playlist has been added to queue", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
-					.setThumbnail(songInfo.thumbnail)
+					.setAuthor("Playlist has been added to queue", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
+					.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png")
 					.setColor("BLACK")
 					.setDescription(`✅  **|**  Playlist: **\`${songInfo.title}\`** has been added \`${songInfo.videoCount}\` video to the queue`)
 				return message.channel.send(thing)
@@ -109,8 +109,8 @@ module.exports = {
 				serverQueue.songs.push(song);
 				if (playlist) return;
 				let thing = new MessageEmbed()
-					.setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
-					.setThumbnail(song.img)
+					.setAuthor("Udah ditambahin di queue", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
+					.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png")
 					.setColor("BLACK")
 					.addField("Name", song.title, true)
 					.addField("Duration", song.duration, true)
@@ -130,7 +130,7 @@ async	function play(guild, song) {
     var online = afk[message.guild.id]
     if (!song){
       if (!online.afk) {
-        sendError("Keluar aja lah gue udh gaad yg bisa di puter dari pada jadi nyamuk. Kalo mao gue stay di room terus ketik `!afk`\n\nDeveloper : Aldi Boytons", message.channel)
+        sendError("Keluar aja lah gue udh gaad yg bisa di puter dari pada jadi nyamuk. Kalo mao gue stay di room terus ketik `!afk`\n\nTTAX Generation® Corp 2021.", message.channel)
         message.guild.me.voice.channel.leave();//If you want your bot stay in vc 24/7 remove this line :D
         message.client.queue.delete(message.guild.id);
       }
@@ -165,8 +165,8 @@ stream.on('error', function(er)  {
 
     dispatcher.setVolume(serverQueue.volume / 100);
 let thing = new MessageEmbed()
-				.setAuthor("Started Playing Music!", "https://raw.githubusercontent.com/aldiboytons/boytons/assets/Music.gif")
-				.setThumbnail(song.img)
+				.setAuthor("Setel lagu dulu bray!", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
+				.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png")
 				.setColor("BLACK")
 				.addField("Name", song.title, true)
 				.addField("Duration", song.duration, true)
