@@ -24,11 +24,11 @@ module.exports = {
     }
 
     let lyricsEmbed = new MessageEmbed()
-      .setAuthor(`${queue.songs[0].title} — Lyrics`, "https://cdn.discordapp.com/attachments/821310209623851008/822894990274723870/giphy.gif")
+      .setAuthor(`${queue.songs[0].title} — Lyrics`, "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
       .setThumbnail(queue.songs[0].img)
       .setColor("BLACK")
       .setDescription(lyrics)
-      .setThumbnail('https://cdn.discordapp.com/attachments/821310209623851008/822892961762377728/PicsArt_03-21-01.02.39.png')
+      .setThumbnail('https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png')
       .setTimestamp();
 
     if (lyricsEmbed.description.length >= 2048)
