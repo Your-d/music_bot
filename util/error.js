@@ -9,6 +9,6 @@ module.exports = async (text, channel) => {
     let embed = new MessageEmbed()
     .setColor("PURPLE")
     .setDescription(text)
-    .setFooter("TTAX Generation® Corp 2021.")
+    .setFooter("SATU ATAP | TTAX Generation® Corp 2021.")
     await channel.send(embed)
 }
