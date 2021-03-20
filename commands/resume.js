@@ -17,8 +17,8 @@ module.exports = {
       let xd = new MessageEmbed()
       .setDescription("▶ Sekuy lanjut !")
       .setColor("BLACK")
-      .setAuthor("LANJUTTT!", "https://i.pinimg.com/originals/6a/93/8e/6a938ede8eaae646f60e611c198fc12f.gif")
-      .setImage('https://cdn.discordapp.com/attachments/821310209623851008/822735076001185822/PicsArt_03-20-02.35.21.png')
+      .setAuthor("LANJUTTT!", "https://cdn.discordapp.com/attachments/821310209623851008/822894990274723870/giphy.gif")
+      .setImage('https://cdn.discordapp.com/attachments/821310209623851008/822892961762377728/PicsArt_03-21-01.02.39.png')
       return message.channel.send(xd);
     }
     return sendError("Gaada yg di puter nih.", message.channel);
