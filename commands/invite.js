@@ -18,9 +18,9 @@ module.exports = {
     .setDescription(`Udah buruan invite kentod! \n\n [Invite Link](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=${permissions}&scope=bot)`)
     .setURL(`https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=${permissions}&scope=bot`)
     .setColor("BLACK")
-    .setImage('https://cdn.discordapp.com/attachments/821310209623851008/822892961762377728/PicsArt_03-21-01.02.39.png')
+    .setImage('https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png')
     .setTimestamp()
-    .setFooter('TTAX Generation® Corp 2021.','https://cdn.discordapp.com/attachments/821704942603468821/821705087838584862/PicsArt_01-16-07.40.04.jpg');
+    .setFooter('TTAX Generation® 2021.','https://cdn.discordapp.com/attachments/821704942603468821/821705087838584862/PicsArt_01-16-07.40.04.jpg');
     return message.channel.send(invite);
   },
 };
