@@ -19,18 +19,18 @@ module.exports = {
 
 	run: async function (client, message, args) {
 		const channel = message.member.voice.channel;
-		if (!channel) return sendError("Masuk dulu ke voice gblk!", message.channel);
+		if (!channel) return sendError("You need to inside vc!", message.channel);
 		const url = args[0] ? args[0].replace(/<(.+)>/g, "$1") : "";
 		var searchString = args.join(" ");
 		const permissions = channel.permissionsFor(message.client.user);
-		if (!permissions.has("CONNECT")) return sendError("Gabisa join voice Gaada permis, coba chat Aldi !", message.channel);
-		if (!permissions.has("SPEAK")) return sendError("Gabisa ngomong nih gue kek org bisu, coba chat Aldi suru kasi gua permis.", message.channel);
+		if (!permissions.has("CONNECT")) return sendError("Missing Permissions CONNECT!", message.channel);
+		if (!permissions.has("SPEAK")) return sendError("Missing Permissions SPEAK!", message.channel);
 
 		if (!searchString||!url) return sendError(`Usage: ${message.client.config.prefix}playlist <YouTube Playlist URL | Playlist Name>`, message.channel);
 		if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
 			try {
 				const playlist = await ytpl(url.split("list=")[1]);
-				if (!playlist) return sendError("Playlist Ga ketemu", message.channel)
+				if (!playlist) return sendError("Playlist not found", message.channel)
 				const videos = await playlist.items;
 				for (const video of videos) {
 					// eslint-disable-line no-await-in-loop
@@ -39,7 +39,7 @@ module.exports = {
 				return message.channel.send({
 					embed: {
 						color: "BLACK",
-						description: `✅  **|**  Playlist: **\`${videos[0].title}\`** Udah gue tambahin`
+						description: `✅  **|**  Playlist: **\`${videos[0].title}\`** Added`
 					}
 				})
 			} catch (error) {
@@ -50,7 +50,7 @@ module.exports = {
 			try {
 				var searched = await yts.search(searchString)
 
-				if (searched.playlists.length === 0) return sendError("Gabisa cari playlist di Youtube ,cari yg laen tot", message.channel)
+				if (searched.playlists.length === 0) return sendError("Cannot find the playlist!", message.channel)
 				var songInfo = searched.playlists[0];
 				let listurl = songInfo.listId;
 				const playlist = await ytpl(listurl)
@@ -61,12 +61,12 @@ module.exports = {
 				}
 				let thing = new MessageEmbed()
 					.setAuthor("Playlist has been added to queue", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
-					.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png")
+					.setThumbnail("https://media.discordapp.net/attachments/811237555357351968/863586432086048798/0d7393dada889aef43d1674f38cc3884.jpg")
 					.setColor("BLACK")
 					.setDescription(`✅  **|**  Playlist: **\`${songInfo.title}\`** has been added \`${songInfo.videoCount}\` video to the queue`)
 				return message.channel.send(thing)
 			} catch (error) {
-				return sendError("Sabar ERROR nich.",message.channel).catch(console.error);
+				return sendError("ERROR",message.channel).catch(console.error);
 			}
 		}
 
@@ -109,8 +109,8 @@ module.exports = {
 				serverQueue.songs.push(song);
 				if (playlist) return;
 				let thing = new MessageEmbed()
-					.setAuthor("Udah ditambahin di queue", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
-					.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png")
+					.setAuthor("Added in queue", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
+					.setThumbnail("https://media.discordapp.net/attachments/811237555357351968/863586432086048798/0d7393dada889aef43d1674f38cc3884.jpg")
 					.setColor("BLACK")
 					.addField("Name", song.title, true)
 					.addField("Duration", song.duration, true)
@@ -130,7 +130,7 @@ async	function play(guild, song) {
     var online = afk[message.guild.id]
     if (!song){
       if (!online.afk) {
-        sendError("Keluar aja lah gue udh gaad yg bisa di puter dari pada jadi nyamuk. Kalo mao gue stay di room terus ketik `!afk`\n\nTTAX Generation® Corp 2021.", message.channel)
+        sendError("imma headout if u want me to stay type `!afk`\n\nYour Favorite Boy.", message.channel)
         message.guild.me.voice.channel.leave();//If you want your bot stay in vc 24/7 remove this line :D
         message.client.queue.delete(message.guild.id);
       }
@@ -165,8 +165,8 @@ stream.on('error', function(er)  {
 
     dispatcher.setVolume(serverQueue.volume / 100);
 let thing = new MessageEmbed()
-				.setAuthor("Setel lagu dulu bray!", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
-				.setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png")
+				.setAuthor("Play the music!", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
+				.setThumbnail("https://media.discordapp.net/attachments/811237555357351968/863586432086048798/0d7393dada889aef43d1674f38cc3884.jpg")
 				.setColor("BLACK")
 				.addField("Name", song.title, true)
 				.addField("Duration", song.duration, true)
