@@ -4,7 +4,7 @@ const sendError = require("../util/error");
 module.exports = {
   info: {
     name: "queue",
-    description: "Buat kasi liat queue nya",
+    description: "To see the queue",
     usage: "",
     aliases: ["q", "list", "songlist", "song-list"],
   },
@@ -13,10 +13,10 @@ module.exports = {
  
   const permissions = message.channel.permissionsFor(message.client.user);
     if (!permissions.has(["MANAGE_MESSAGES", "ADD_REACTIONS"]))
-      return sendError("Gaada permis manage message sama add reaction",message.channel);
+      return sendError("Missing Permissions MANAGE MESSAGE and ADD REACTIONS",message.channel);
 
     const queue = message.client.queue.get(message.guild.id);
-    if (!queue) return sendError("Gaada lagu nya tolol",message.channel)
+    if (!queue) return sendError("No music in queue",message.channel)
 
     let currentPage = 0;
     const embeds = generateQueueEmbed(message, queue.songs);
