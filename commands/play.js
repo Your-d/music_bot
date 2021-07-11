@@ -15,14 +15,14 @@ module.exports = {
 
   run: async function (client, message, args) {
     let channel = message.member.voice.channel;
-    if (!channel)return sendError("Masuk Room dulu GOBLOK !", message.channel);
+    if (!channel)return sendError("You must be inside vc !", message.channel);
 
     const permissions = channel.permissionsFor(message.client.user);
-    if (!permissions.has("CONNECT"))return sendError("Gaada permis,Kasi permis dulu bilang si Aldi!", message.channel);
-    if (!permissions.has("SPEAK"))return sendError("Gaada permis jingg,gimana gua mau muter musik,coba bilang ke Aldi dulu", message.channel);
+    if (!permissions.has("CONNECT"))return sendError("I got no permissions CONNECT", message.channel);
+    if (!permissions.has("SPEAK"))return sendError("I got no permissions SPEAK", message.channel);
 
     var searchString = args.join(" ");
-    if (!searchString)return sendError("Gabisa jing.", message.channel);
+    if (!searchString)return sendError("ERROR!.", message.channel);
    	const url = args[0] ? args[0].replace(/<(.+)>/g, "$1") : "";
    var serverQueue = message.client.queue.get(message.guild.id);
 
@@ -31,7 +31,7 @@ module.exports = {
     if (url.match(/^(https?:\/\/)?(www\.)?(m\.)?(youtube\.com|youtu\.?be)\/.+$/gi)) {
        try {
           songInfo = await ytdl.getInfo(url)
-          if(!songInfo)return sendError("Gabisa masuk room tot,limit nya naekin dulu kntl-_-", message.channel);
+          if(!songInfo)return sendError("Increase ur limit room", message.channel);
         song = {
        id: songInfo.videoDetails.videoId,
        title: songInfo.videoDetails.title,
@@ -51,7 +51,7 @@ module.exports = {
     }else {
       try {
         var searched = await yts.search(searchString);
-    if(searched.videos.length === 0)return sendError("Gabisa search di Youtube ni gatau knp,coba tanya si Aldi", message.channel)
+    if(searched.videos.length === 0)return sendError("Can't doing that i don't know why", message.channel)
     
      songInfo = searched.videos[0]
         song = {
@@ -73,8 +73,8 @@ module.exports = {
     if (serverQueue) {
       serverQueue.songs.push(song);
       let thing = new MessageEmbed()
-      .setAuthor("Udah ditambahin di queue", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
-      .setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png")
+      .setAuthor("Added in queue", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
+      .setThumbnail("https://media.discordapp.net/attachments/811237555357351968/863586432086048798/0d7393dada889aef43d1674f38cc3884.jpg")
       .setColor("BLACK")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
@@ -104,7 +104,7 @@ module.exports = {
     var online = afk[message.guild.id]
     if (!song){
       if (!online.afk) {
-        sendError("Keluar aja lah gaada lagu yg bisa gue puterin. Kalo mau gua stay di room trus ketik `afk`\n\nTTAX Generation® Corp 2021.", message.channel)
+        sendError("No music in queue imma headout `afk`\n\nYour Favorite Boy.", message.channel)
         message.guild.me.voice.channel.leave();//If you want your bot stay in vc 24/7 remove this line :D
         message.client.queue.delete(message.guild.id);
       }
@@ -138,8 +138,8 @@ stream.on('error', function(er)  {
 
       dispatcher.setVolumeLogarithmic(queue.volume / 100);
       let thing = new MessageEmbed()
-      .setAuthor("SETELIN LAGU!", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
-      .setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png")
+      .setAuthor("Playing music!", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
+      .setThumbnail("https://media.discordapp.net/attachments/811237555357351968/863586432086048798/0d7393dada889aef43d1674f38cc3884.jpg")
       .setColor("BLACK")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
