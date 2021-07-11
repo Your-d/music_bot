@@ -20,8 +20,8 @@ module.exports = {
         .setAuthor("Commands of "+client.user.username, "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
         .setColor("GREY")
         .setDescription(allcmds)
-        .setFooter(`TTAX Generation® Corp 2021.`)
-        .setThumbnail('https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png')
+        .setFooter(`Your favorite Boy.`)
+        .setThumbnail('https://media.discordapp.net/attachments/811237555357351968/863586432086048798/0d7393dada889aef43d1674f38cc3884.jpg')
 
         if(!args[0])return message.channel.send(embed)
         else {
