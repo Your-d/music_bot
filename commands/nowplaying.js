@@ -4,7 +4,7 @@ const sendError = require("../util/error")
 module.exports = {
   info: {
     name: "nowplaying",
-    description: "Buat kasi liat yang sekarang lagi di dengerin",
+    description: "To show what music playing right now",
     usage: "",
     aliases: ["np"],
   },
@@ -15,7 +15,7 @@ module.exports = {
     let song = serverQueue.songs[0]
     let thing = new MessageEmbed()
       .setAuthor("Now Playing", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
-      .setThumbnail("https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png")
+      .setThumbnail("https://media.discordapp.net/attachments/811237555357351968/863586432086048798/0d7393dada889aef43d1674f38cc3884.jpg")
       .setColor("BLACK")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
