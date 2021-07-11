@@ -22,13 +22,13 @@ module.exports = {
              message.channel.send({
                 embed: {
                     color: "BLACK",
-                    description: `🖕  **|**  AFK di **\`${serverQueue.afk === true ? "enabled" : "disabled"}\`**`
+                    description: `💤  **|**  AFK in **\`${serverQueue.afk === true ? "enabled" : "disabled"}\`**`
                 }
             });
             return  fs.writeFile("./afk.json", JSON.stringify(afk), (err) => {
         if (err) console.error(err);
     });
         };
-    return sendError("Gaada lagu nye nihh kontol.", message.channel);
+    return sendError("No music in queue", message.channel);
   },
 };
