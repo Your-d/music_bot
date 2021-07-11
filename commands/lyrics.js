@@ -12,15 +12,15 @@ module.exports = {
 
   run: async function (client, message, args) {
     const queue = message.client.queue.get(message.guild.id);
-    if (!queue) return sendError("Gaada yang di puter kntl.",message.channel).catch(console.error);
+    if (!queue) return sendError("No music in queue.",message.channel).catch(console.error);
 
     let lyrics = null;
 
     try {
       lyrics = await lyricsFinder(queue.songs[0].title, "");
-      if (!lyrics) lyrics = `Gaada liriknya nih lagu nye ${queue.songs[0].title}.`;
+      if (!lyrics) lyrics = `No lyrics found ${queue.songs[0].title}.`;
     } catch (error) {
-      lyrics = `Gaada liriknya nih lagu nye ${queue.songs[0].title}.`;
+      lyrics = `No lyrics found ${queue.songs[0].title}.`;
     }
 
     let lyricsEmbed = new MessageEmbed()
@@ -28,7 +28,7 @@ module.exports = {
       .setThumbnail(queue.songs[0].img)
       .setColor("BLACK")
       .setDescription(lyrics)
-      .setThumbnail('https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png')
+      .setThumbnail('https://media.discordapp.net/attachments/811237555357351968/863586432086048798/0d7393dada889aef43d1674f38cc3884.jpg')
       .setTimestamp();
 
     if (lyricsEmbed.description.length >= 2048)
