@@ -20,9 +20,9 @@ module.exports = {
         return sendError(`:notes: The player has stopped and the queue has been cleared.: ${error}`, message.channel);
       }	    
       let xd = new MessageEmbed()
-      .setDescription("⏸ Gua pause nih,buat lu apa sih yang engga")
+      .setDescription("⏸")
       .setColor("BLACK")
-      .setTitle("Udah gue pause tuh !")
+      .setTitle("Pause !")
       return message.channel.send(xd);
     }
     return sendError("Gaada yang di puter ajg.", message.channel);
