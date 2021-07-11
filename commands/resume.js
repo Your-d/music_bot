@@ -15,12 +15,12 @@ module.exports = {
       serverQueue.playing = true;
       serverQueue.connection.dispatcher.resume();
       let xd = new MessageEmbed()
-      .setDescription("▶ Sekuy lanjut !")
+      .setDescription("▶️ resume!")
       .setColor("BLACK")
-      .setAuthor("LANJUTTT!", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
-      .setImage('https://cdn.discordapp.com/attachments/821310209623851008/822973565175332864/PicsArt_03-21-06.22.59.png')
+      .setAuthor("Continue", "https://media0.giphy.com/media/ScBN2m4ZR9NJ3mPdA2/source.gif")
+      .setImage('https://media.discordapp.net/attachments/811237555357351968/863586432086048798/0d7393dada889aef43d1674f38cc3884.jpg')
       return message.channel.send(xd);
     }
-    return sendError("Gaada yg di puter nih.", message.channel);
+    return sendError("No music in queue.", message.channel);
   },
 };
